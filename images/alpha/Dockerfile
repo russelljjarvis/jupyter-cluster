@@ -27,12 +27,9 @@ RUN apt-get update -qq \
       libxslt-dev \
       libzmq3-dev \
       llvm-3.7-dev \
-      pandoc \
       pkg-config \
       python3 \
       python3-dev \
-      vim \
-      zip
 
 RUN curl https://bootstrap.pypa.io/get-pip.py > get-pip.py \
  && python3 get-pip.py \
@@ -78,14 +75,9 @@ RUN LLVM_CONFIG=llvm-config-3.7 pip install -q \
       qgrid \
       quandl \
       requests[security] \
-      seaborn \
-      scikit-image \
-      scikit-learn \
       scipy \
       scoop \
       scrapy \
-      sqlalchemy \
-      statsmodels \
       sympy \
       tables \
       Theano \
