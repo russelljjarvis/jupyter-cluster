@@ -10,8 +10,6 @@ RUN apt-get update -qq \
       gcc \
       gfortran \
       git \
-      graphviz \
-      graphviz-dev \
       less \
       libblosc-dev \
       libedit-dev \
@@ -29,7 +27,7 @@ RUN apt-get update -qq \
       llvm-3.7-dev \
       pkg-config \
       python3 \
-      python3-dev \
+      python3-dev 
 
 RUN curl https://bootstrap.pypa.io/get-pip.py > get-pip.py \
  && python3 get-pip.py \
@@ -47,9 +45,6 @@ RUN LLVM_CONFIG=llvm-config-3.7 pip install -q \
       cppimport \
       cufflinks \
       cvxpy \
-      deap \
-      gmpy \
-      graphviz \
       h5py \
       html5lib \
       ipyparallel \
@@ -67,7 +62,6 @@ RUN LLVM_CONFIG=llvm-config-3.7 pip install -q \
       pandas \
       pandas-datareader \
       Pillow \
-      plotly \
       https://github.com/quantopian/pyfolio/archive/master.zip \
       pygraphviz \
       pykalman \
