@@ -2,8 +2,8 @@ FROM 0x0l/base:latest
 
 ENV PYTHONIOENCODING UTF-8
 
-RUN apt-get update -qq \
- && apt-get install -yqq \
+RUN apt-get update \
+ && apt-get install -y \
       curl \
       ffmpeg \
       g++ \
@@ -33,11 +33,11 @@ RUN curl https://bootstrap.pypa.io/get-pip.py > get-pip.py \
  && python3 get-pip.py \
  && rm get-pip.py
 
-RUN pip install -q \
+RUN pip install \
       Cython \
       numpy
 
-RUN LLVM_CONFIG=llvm-config-3.7 pip install -q \
+RUN LLVM_CONFIG=llvm-config-3.7 pip install \
       beautifulsoup4 \
       blosc \
       boto \
@@ -45,7 +45,6 @@ RUN LLVM_CONFIG=llvm-config-3.7 pip install -q \
       cppimport \
       cufflinks \
       cvxpy \
-      h5py \
       html5lib \
       ipyparallel \
       jupyter \
@@ -63,7 +62,6 @@ RUN LLVM_CONFIG=llvm-config-3.7 pip install -q \
       pandas-datareader \
       Pillow \
       https://github.com/quantopian/pyfolio/archive/master.zip \
-      pygraphviz \
       pykalman \
       https://github.com/pymc-devs/pymc3/archive/master.zip \
       qgrid \
