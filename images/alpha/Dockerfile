@@ -35,7 +35,8 @@ RUN curl https://bootstrap.pypa.io/get-pip.py > get-pip.py \
 
 RUN pip install \
       Cython \
-      numpy
+      numpy \
+      numba
 
 RUN LLVM_CONFIG=llvm-config-3.7 pip install \
       beautifulsoup4 \
